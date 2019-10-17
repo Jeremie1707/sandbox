@@ -1,6 +1,8 @@
 const isGood = (soldierType) => {
   // TODO: return `true` if the soldierType is Good.
   // Hint: Hobbits, Elves, Dwarves and Eagles are Good
+  const goodGuys = ["Hobbits", "Elves", "Dwarves", "Eagles"];
+  return (goodGuys.includes(soldierType));
 };
 
 const buildSoldierMap = (battlefield) => {
@@ -12,3 +14,7 @@ const whoWinsTheWar = (battlefield) => {
 };
 
 module.exports = { whoWinsTheWar, buildSoldierMap, isGood }; // Do not remove this line
+
+
+// describe("isGood", () => {
+//     ["Hobbits", "Elves", "Dwarves", "Eagles"]
