@@ -19,3 +19,7 @@
 #results-wrapper, #results-wrapper #results  {
   position: relative;
 }
+
+.new-background {
+  background-color: rgb(221, 244, 255);
+}
