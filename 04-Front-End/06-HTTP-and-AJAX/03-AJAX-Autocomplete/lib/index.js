@@ -8,7 +8,6 @@ const callApi = (inputCall) => {
   fetch(`https://wagon-dictionary.herokuapp.com/autocomplete/${input.value}`)
     .then(response => response.json())
     .then((data) => {
-      console.log(data);
       data.words.forEach((word) => {
         let inpTry = "";
         inpTry = `<li>${word}</li>`;
@@ -20,7 +19,6 @@ const callApi = (inputCall) => {
 const displaySuggestions = (event) => {
   results.innerHTML = "";
   const value = input.value;
-  console.log(value);
   callApi(input.value);
 };
 
