@@ -4,7 +4,7 @@ const input = document.getElementById("search");
 const results = document.getElementById("results");
 
 
-const callApi = (inputCall) => {
+const callApi = () => {
   fetch(`https://wagon-dictionary.herokuapp.com/autocomplete/${input.value}`)
     .then(response => response.json())
     .then((data) => {
@@ -18,8 +18,7 @@ const callApi = (inputCall) => {
 
 const displaySuggestions = (event) => {
   results.innerHTML = "";
-  const value = input.value;
-  callApi(input.value);
+  callApi();
 };
 
 input.addEventListener("keyup", displaySuggestions);
